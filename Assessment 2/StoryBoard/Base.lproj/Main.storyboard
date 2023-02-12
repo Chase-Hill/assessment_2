@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="996" y="-268"/>
         </scene>
-        <!--Team Details View Controller-->
+        <!--Team Detailed View Controller-->
         <scene sceneID="6CG-gh-EYU">
             <objects>
-                <viewController id="mH8-yy-e2y" customClass="TeamDetailsViewController" sceneMemberID="viewController">
+                <viewController id="mH8-yy-e2y" customClass="TeamDetailedViewController" customModule="Assessment_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Miz-Dr-Bg6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,6 +141,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Clear" titleAlignment="automatic">
                                             <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clearButtonTapped:" destination="mH8-yy-e2y" eventType="touchUpInside" id="iYa-Rm-Ovr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYH-1y-TFw">
                                         <rect key="frame" x="247" y="0.0" width="130" height="34.333333333333336"/>
@@ -148,6 +151,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Delete">
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="deleteButtonTapped:" destination="mH8-yy-e2y" eventType="touchUpInside" id="9yR-ek-HVz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -166,8 +172,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="evp-St-XeJ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="80h-6R-jZ4"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="80h-6R-jZ4">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="mH8-yy-e2y" id="ADE-mA-tI5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="clearButton" destination="yWA-KB-0AH" id="5d0-Od-NQN"/>
+                        <outlet property="deleteButton" destination="JYH-1y-TFw" id="6At-q4-XWj"/>
+                        <outlet property="teamCountTextField" destination="zkp-cG-Yls" id="5oO-qT-Z38"/>
+                        <outlet property="teamNameTextField" destination="Pxe-Du-lcP" id="9XI-mD-mLA"/>
+                        <outlet property="teamRankingTextField" destination="JJX-gO-Yyb" id="cei-Rg-kqd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAZ-U9-0M2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
