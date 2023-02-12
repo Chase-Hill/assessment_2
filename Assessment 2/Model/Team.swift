@@ -9,10 +9,10 @@ import Foundation
 
 class Team {
     var teamName: String
-    var teamRating: Double
+    var teamRating: Int
     var teamCount: Int
     
-    init(teamName: String, teamRating: Double, teamCount: Int) {
+    init(teamName: String, teamRating: Int, teamCount: Int) {
         self.teamName = teamName
         self.teamRating = teamRating
         self.teamCount = teamCount

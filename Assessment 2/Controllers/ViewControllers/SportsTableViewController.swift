@@ -9,6 +9,8 @@ import UIKit
 
 class SportsTableViewController: UITableViewController {
     
+    static let sharedInstance = SportsTableViewController()
+    
     // MARK: - Life-Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -30,6 +32,17 @@ class SportsTableViewController: UITableViewController {
         let team = TeamController.sharedInstance.teams[indexPath.row]
         cell.updateView(team: team)
         
+        cell.teamNameLabel.text = team.teamName
+        
+        if team.teamName == "CHIEFS" {
+            cell.backgroundColor = UIColor.red
+        } else {
+            if team.teamName == "EAGLES" {
+                cell.backgroundColor = UIColor.systemTeal
+            } else {
+                cell.backgroundColor = UIColor.white
+            }
+        }
         return cell
     }
     

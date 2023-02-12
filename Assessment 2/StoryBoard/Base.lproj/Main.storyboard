@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" systemColor="systemGrayColor"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemGrayColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sportsTeams" id="CM3-Ix-F0i" customClass="TeamTableViewCell" customModule="Assessment_2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="94.666664123535156"/>
@@ -67,11 +70,13 @@
                                         <constraint firstItem="IfS-KM-Oor" firstAttribute="top" secondItem="AQ6-qI-37t" secondAttribute="top" constant="2" id="pAc-4r-FEo"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="playerCountLabel" destination="fF9-xX-aE2" id="Ooz-cD-wkL"/>
                                     <outlet property="teamNameLabel" destination="GhL-2d-Dja" id="HAZ-Hg-33c"/>
                                     <outlet property="teamRatingLabel" destination="6fA-jD-Gy5" id="blb-5T-DXm"/>
+                                    <outletCollection property="gestureRecognizers" destination="g3B-yf-Ic5" appends="YES" id="Hgo-MH-vf3"/>
+                                    <outletCollection property="gestureRecognizers" destination="roK-F3-Lef" appends="YES" id="PMf-4o-gpj"/>
                                     <segue destination="mH8-yy-e2y" kind="show" identifier="toDetailsViewController" id="dcq-5O-Baf"/>
                                 </connections>
                             </tableViewCell>
@@ -90,6 +95,8 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P11-vG-LKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="g3B-yf-Ic5"/>
+                <tapGestureRecognizer id="roK-F3-Lef"/>
             </objects>
             <point key="canvasLocation" x="996" y="-268"/>
         </scene>
@@ -167,6 +174,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q1S-ep-2Pe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="doS-Cn-d1H" firstAttribute="centerX" secondItem="Q1S-ep-2Pe" secondAttribute="centerX" id="Dq4-V3-qKW"/>
                             <constraint firstItem="Q1S-ep-2Pe" firstAttribute="trailing" secondItem="doS-Cn-d1H" secondAttribute="trailing" constant="8" id="Hpb-EZ-0Us"/>
@@ -177,6 +185,9 @@
                             <constraint firstItem="4PQ-GC-TEI" firstAttribute="top" secondItem="doS-Cn-d1H" secondAttribute="bottom" constant="20" id="oSO-tX-N9s"/>
                             <constraint firstItem="4PQ-GC-TEI" firstAttribute="centerX" secondItem="Q1S-ep-2Pe" secondAttribute="centerX" id="rR1-rJ-u26"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HXS-3g-AMy" appends="YES" id="ntW-s2-Mtk"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="evp-St-XeJ">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="80h-6R-jZ4">
@@ -194,6 +205,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAZ-U9-0M2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HXS-3g-AMy"/>
             </objects>
             <point key="canvasLocation" x="1830" y="-268"/>
         </scene>
@@ -226,11 +238,11 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

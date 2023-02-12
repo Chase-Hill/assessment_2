@@ -23,5 +23,10 @@ class TeamTableViewCell: UITableViewCell {
         playerCountLabel.text = "Team Count: \(team.teamCount)"
         teamNameLabel.text = team.teamName.uppercased()
         teamRatingLabel.text = "#\(team.teamRating)"
+        
+        
     }
 }
+
+
+

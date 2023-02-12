@@ -21,6 +21,8 @@ class TeamDetailedViewController: UIViewController {
     
     @IBOutlet weak var deleteButton: UIButton!
     
+    
+    
     // MARK: - Life-Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,7 @@ class TeamDetailedViewController: UIViewController {
     // MARK: - Property
     
     var team: Team?
-    
+    var teams: [Team] = []
     // MARK: - Button Actions
     
     @IBAction func saveButtonTapped(_ sender: Any) {
@@ -40,7 +42,7 @@ class TeamDetailedViewController: UIViewController {
         let ranking = teamRankingTextField.text, !ranking.isEmpty,
               let count = teamCountTextField.text, !count.isEmpty else {return}
         
-        let unwrappedRanking = Double(ranking) ?? 0.0
+        let unwrappedRanking = Int(ranking) ?? 0
         let unwrappedCount = Int(count) ?? 0
         
         if let team = team {
@@ -56,9 +58,13 @@ class TeamDetailedViewController: UIViewController {
         
     }
     
-   // @IBAction func deleteButtonTapped(_ sender: Any) {
-        
-    //}
+    
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        if let team = team {
+            TeamController.sharedInstance.deleteTeam(teamToDelete: team)
+            navigationController?.popViewController(animated: true)
+        }
+    }
     
     @IBAction func clearButtonTapped(_ sender: Any) {
         resetView()
@@ -74,7 +80,7 @@ class TeamDetailedViewController: UIViewController {
     }
     
     func resetView() {
-        teamCountTextField.text = ""
+        teamNameTextField.text = ""
         teamRankingTextField.text = ""
         teamCountTextField.text = ""
     }
