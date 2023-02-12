@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="onK-yK-gAd">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sports Teams-->
+        <scene sceneID="1QM-g2-oIO">
+            <objects>
+                <tableViewController id="fGL-1m-SLe" customClass="SportsTableViewController" customModule="Assessment_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="leC-sr-cFy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SportsTeams" id="CM3-Ix-F0i" customClass="TeamTableViewCell" customModule="Assessment_2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CM3-Ix-F0i" id="AQ6-qI-37t">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="45"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IfS-KM-Oor">
+                                            <rect key="frame" x="2" y="2" width="389" height="41"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhL-2d-Dja">
+                                                    <rect key="frame" x="0.0" y="0.0" width="389" height="20.666666666666668"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gWj-TQ-GWZ">
+                                                    <rect key="frame" x="0.0" y="20.666666666666671" width="389" height="20.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Player Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fF9-xX-aE2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="326.33333333333331" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fA-jD-Gy5">
+                                                            <rect key="frame" x="328.33333333333331" y="0.0" width="60.666666666666686" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IfS-KM-Oor" firstAttribute="leading" secondItem="AQ6-qI-37t" secondAttribute="leading" constant="2" id="3oN-Fk-faI"/>
+                                        <constraint firstAttribute="bottom" secondItem="IfS-KM-Oor" secondAttribute="bottom" constant="2" id="UrU-EM-WUq"/>
+                                        <constraint firstAttribute="trailing" secondItem="IfS-KM-Oor" secondAttribute="trailing" constant="2" id="VVJ-cz-mTv"/>
+                                        <constraint firstItem="IfS-KM-Oor" firstAttribute="top" secondItem="AQ6-qI-37t" secondAttribute="top" constant="2" id="pAc-4r-FEo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="playerCountLabel" destination="fF9-xX-aE2" id="Ooz-cD-wkL"/>
+                                    <outlet property="teamNameLabel" destination="GhL-2d-Dja" id="HAZ-Hg-33c"/>
+                                    <outlet property="teamPositionLabel" destination="6fA-jD-Gy5" id="VCh-Zv-Oqy"/>
+                                    <segue destination="mH8-yy-e2y" kind="show" identifier="toDetailsViewController" id="dcq-5O-Baf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fGL-1m-SLe" id="iUf-iH-pMI"/>
+                            <outlet property="delegate" destination="fGL-1m-SLe" id="0LX-tx-kDJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Sports Teams" id="kGa-gq-Nad">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2or-rE-hE8">
+                            <connections>
+                                <segue destination="mH8-yy-e2y" kind="show" id="pmC-ZE-jmO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P11-vG-LKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="-268"/>
+        </scene>
+        <!--Team Details View Controller-->
+        <scene sceneID="6CG-gh-EYU">
+            <objects>
+                <viewController id="mH8-yy-e2y" customClass="TeamDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Miz-Dr-Bg6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="doS-Cn-d1H">
+                                <rect key="frame" x="8" y="113" width="377" height="203"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk4-TS-5K0">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team Name..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pxe-Du-lcP">
+                                        <rect key="frame" x="0.0" y="28.333333333333343" width="377" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBH-7l-6VR">
+                                        <rect key="frame" x="0.0" y="70.333333333333343" width="377" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team Ranking..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JJX-gO-Yyb">
+                                        <rect key="frame" x="0.0" y="98.666666666666657" width="377" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDk-wn-1dH">
+                                        <rect key="frame" x="0.0" y="140.66666666666666" width="377" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team Count..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zkp-cG-Yls">
+                                        <rect key="frame" x="0.0" y="169" width="377" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="117" translatesAutoresizingMaskIntoConstraints="NO" id="4PQ-GC-TEI">
+                                <rect key="frame" x="8" y="336" width="377" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWA-KB-0AH">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Clear" titleAlignment="automatic">
+                                            <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYH-1y-TFw">
+                                        <rect key="frame" x="247" y="0.0" width="130" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Delete">
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q1S-ep-2Pe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="doS-Cn-d1H" firstAttribute="centerX" secondItem="Q1S-ep-2Pe" secondAttribute="centerX" id="Dq4-V3-qKW"/>
+                            <constraint firstItem="Q1S-ep-2Pe" firstAttribute="trailing" secondItem="doS-Cn-d1H" secondAttribute="trailing" constant="8" id="Hpb-EZ-0Us"/>
+                            <constraint firstItem="doS-Cn-d1H" firstAttribute="leading" secondItem="Q1S-ep-2Pe" secondAttribute="leading" constant="8" id="Jip-fs-6Sb"/>
+                            <constraint firstItem="4PQ-GC-TEI" firstAttribute="leading" secondItem="Q1S-ep-2Pe" secondAttribute="leading" constant="8" id="bx8-Pj-4Q5"/>
+                            <constraint firstItem="Q1S-ep-2Pe" firstAttribute="trailing" secondItem="4PQ-GC-TEI" secondAttribute="trailing" constant="8" id="hg3-bZ-qdd"/>
+                            <constraint firstItem="doS-Cn-d1H" firstAttribute="top" secondItem="Q1S-ep-2Pe" secondAttribute="top" constant="10" id="nrc-Ps-Z2y"/>
+                            <constraint firstItem="4PQ-GC-TEI" firstAttribute="top" secondItem="doS-Cn-d1H" secondAttribute="bottom" constant="20" id="oSO-tX-N9s"/>
+                            <constraint firstItem="4PQ-GC-TEI" firstAttribute="centerX" secondItem="Q1S-ep-2Pe" secondAttribute="centerX" id="rR1-rJ-u26"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="evp-St-XeJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="80h-6R-jZ4"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IAZ-U9-0M2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1830" y="-268"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8MR-Xf-n66">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="onK-yK-gAd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XP7-di-Plj">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fGL-1m-SLe" kind="relationship" relationship="rootViewController" id="M9V-Rh-8J8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKk-xq-pJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.358778625954194" y="-268.3098591549296"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dcq-5O-Baf"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
