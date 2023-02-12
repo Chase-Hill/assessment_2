@@ -25,6 +25,8 @@ class TeamDetailedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateView(team: team)
+        buttonAttributes()
     }
     
     // MARK: - Property
@@ -35,8 +37,8 @@ class TeamDetailedViewController: UIViewController {
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let name = teamNameTextField.text, !name.isEmpty,
-        let ranking = teamRankingTextField.text, !"\(ranking)".isEmpty,
-              let count = teamCountTextField.text, !"\(count)".isEmpty else {return}
+        let ranking = teamRankingTextField.text, !ranking.isEmpty,
+              let count = teamCountTextField.text, !count.isEmpty else {return}
         
         let unwrappedRanking = Double(ranking) ?? 0.0
         let unwrappedCount = Int(count) ?? 0
@@ -50,12 +52,13 @@ class TeamDetailedViewController: UIViewController {
             
         }
         
-        navigationController?.popViewController(animated: true)
+    navigationController?.popViewController(animated: true)
         
     }
     
-    @IBAction func deleteButtonTapped(_ sender: Any) {
-    }
+   // @IBAction func deleteButtonTapped(_ sender: Any) {
+        
+    //}
     
     @IBAction func clearButtonTapped(_ sender: Any) {
         resetView()
@@ -66,7 +69,18 @@ class TeamDetailedViewController: UIViewController {
     func updateView(team: Team?) {
         guard let team = team else {return}
         teamNameTextField.text = team.teamName
-        teamRankingTextField.text = team.teamRating
-        teamCountTextField.text = team.teamCount
+        teamRankingTextField.text = "\(team.teamRating)"
+        teamCountTextField.text = "\(team.teamCount)"
+    }
+    
+    func resetView() {
+        teamCountTextField.text = ""
+        teamRankingTextField.text = ""
+        teamCountTextField.text = ""
+    }
+    
+    func buttonAttributes() {
+        clearButton.isHidden = team == nil ? true : false
+        deleteButton.isHidden = team == nil ? true : false
     }
 }

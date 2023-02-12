@@ -67,7 +67,10 @@
 				AF9753DB29988F1F00F79211 /* Model */,
 				AF9753D32998852D00F79211 /* StoryBoard */,
 				AF9753D52998855300F79211 /* Controllers */,
-				AF9753D42998854700F79211 /* Helper Files */,
+				AF9753CD2998850300F79211 /* Info.plist */,
+				AF9753C12998850200F79211 /* SceneDelegate.swift */,
+				AF9753BF2998850200F79211 /* AppDelegate.swift */,
+				AF9753C82998850300F79211 /* Assets.xcassets */,
 			);
 			path = "Assessment 2";
 			sourceTree = "<group>";
@@ -79,17 +82,6 @@
 				AF9753CA2998850300F79211 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoard;
-			sourceTree = "<group>";
-		};
-		AF9753D42998854700F79211 /* Helper Files */ = {
-			isa = PBXGroup;
-			children = (
-				AF9753BF2998850200F79211 /* AppDelegate.swift */,
-				AF9753C12998850200F79211 /* SceneDelegate.swift */,
-				AF9753C82998850300F79211 /* Assets.xcassets */,
-				AF9753CD2998850300F79211 /* Info.plist */,
-			);
-			path = "Helper Files";
 			sourceTree = "<group>";
 		};
 		AF9753D52998855300F79211 /* Controllers */ = {
@@ -352,7 +344,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Assessment 2/Helper Files/Info.plist";
+				INFOPLIST_FILE = "Assessment 2/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -379,7 +371,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Assessment 2/Helper Files/Info.plist";
+				INFOPLIST_FILE = "Assessment 2/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
